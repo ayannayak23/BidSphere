@@ -79,6 +79,12 @@ nav a {
   gap: 1em;
 }
 
+.hamburger{
+  display: none;
+  color: inherit;
+  text-decoration: none;
+}
+
 .item-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -101,6 +107,11 @@ nav a {
   min-height: 160px;
   height: auto;
   border-radius: 8px;
+}
+
+.categories h2{
+  margin: 0;
+  font-size: 1.2em;
 }
 
 .categories button {
@@ -129,6 +140,93 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.hamburger i {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav-open .hamburger i {
+  transform: rotate(135deg);
+}
+
+@media screen and (max-width: 950px){
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .categories h2{
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .heading{
+    display: block;
+  }
+
+  .hamburger{
+    display: block;
+    float: right;
+    padding: 12px;
+    font-size: 1.6rem;
+    color: white !important;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+  }
+
+  nav ul {
+    position: fixed;
+    z-index: 10;
+    display: none;
+    left: 0;
+    top: 72px;
+    width: 100%;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 1.2rem;
+    background-color: #2F2F2F;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul li {
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-open ul {
+    display: block;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .heading h1{
+    font-size: 2em;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .categories h2{
+    font-size: 1em;
+    margin-bottom: -1em;
+  }
+
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: black;
@@ -152,6 +250,19 @@ button:focus-visible {
     background-color: rgba(0, 0, 0, 0.05);
   }
 
+  .hamburger{
+    color: #1a1a1a !important;
+  }
+
+  nav ul {
+    background-color: #f0f0f0;
+  }
+
+  nav ul li {
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
   .item {
     background-color: rgba(0, 0, 0, 0.05);
   }
@@ -159,5 +270,16 @@ button:focus-visible {
   .heading {
     background-color: #f0f0f0;
     border-bottom: black solid 5px;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

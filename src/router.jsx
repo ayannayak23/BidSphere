@@ -4,6 +4,7 @@ import {
     HomePageLayout,
     LandingPage,
     ContactPage,
+    ProductPage,
     ErrorPage
 } from "./pages/index";
 
@@ -21,6 +22,11 @@ export const router = createBrowserRouter([
                 path: "/contact",
                 element: <ContactPage />
             },
+            {
+                path: "/item/:id",
+                element: <ProductPage />
+            },
+
         ],
     },
 ]);

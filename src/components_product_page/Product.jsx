@@ -15,7 +15,7 @@ const Product = ({
         <div className="product-container">
             <ProductImage image={item.image} title={item.title} />
             <div className="product-info">
-                <ProductInfo title={item.title} description={item.description} category={item.category}/>
+                <ProductInfo title={item.title} description={item.description} category={item.category} rating={item.rating} />
                 <BidInfo
                     item = {item}
                     timeLeft={timeLeft}

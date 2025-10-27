@@ -1,4 +1,4 @@
-import ItemList from '../items/ItemList';
+import ItemList from '../components_index_page/ItemList';
 
 const LandingPage = () => {
     return(

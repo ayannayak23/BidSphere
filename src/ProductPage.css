@@ -35,7 +35,7 @@
 
 .main-image {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -76,6 +76,11 @@
     display: flex;
     gap: 0.5em;
     flex-wrap: wrap;
+}
+
+.product-rating{
+    font-size: 1.2em;
+    color: white;
 }
 
 .category-tag {
@@ -283,6 +288,10 @@
 
     .main-image {
         background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .product-rating{
+        color: black;
     }
 
     .auction-info, .bids-history, .product-details {

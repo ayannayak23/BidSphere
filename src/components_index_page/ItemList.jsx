@@ -40,7 +40,9 @@ const ItemList = () => {
                     const itemInfo = {
                         title: item.title,
                         price: item.price,
-                        image: item.image
+                        image: item.image,
+                        rating: item.rating,
+                        id: item.id
                     };
                     return <Item {...itemInfo } key={item.id} />
                 })}

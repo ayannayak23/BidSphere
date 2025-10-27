@@ -115,6 +115,11 @@ nav .active:hover{
   text-align: center;
 }
 
+.item h3 {
+  color: white;
+  text-decoration: underline;
+}
+
 .item img {
   max-width: 100%;
   max-height: 200px;
@@ -281,6 +286,10 @@ footer {
 
   h1{
     background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .item h3 {
+    color: black;
   }
 
   .hamburger{

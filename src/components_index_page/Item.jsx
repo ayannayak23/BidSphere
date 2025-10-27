@@ -3,12 +3,12 @@ import ItemName from "./ItemName";
 import ItemPrice from "./ItemPrice";
 
 const Item = (info) => {
-    const { title, price, image } = info;
+    const { title, price, image, rating, id } = info;
     return (
         <article className="item">
-            <ItemImage src={image} alt={title} />
-            <ItemName name={title} />
-            <ItemPrice price={price} />
+            <ItemImage src={image} alt={title} id={id} />
+            <ItemName name={title} id={id} />
+            <ItemPrice price={price} rating={rating} />
         </article>
     );
 }

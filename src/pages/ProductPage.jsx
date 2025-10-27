@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { data } from '../items/items-data';
+import { data } from '../components_index_page/items-data';
 import '../ProductPage.css';
 import Product from '../components_product_page/Product';
 import BidHistory from '../components_product_page/BidHistory';
